@@ -1,0 +1,5 @@
+/src6/.idea/
+/src6/hide/posts/__pycache__/
+/src6/hide/hide/__pycache__/
+/src6/hide/posts/migrations/__pycache__/
+*.sqlite3
