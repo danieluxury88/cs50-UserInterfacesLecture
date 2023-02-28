@@ -13,29 +13,20 @@
 
     <script type="text/babel">
         function App() {
-            const x = 1;
-            const y = 2;
+
+            const[count, setCount] = React.useState(17);
+
+            function updateCount(){
+                setCount(count+1);
+            }
             return (
                 <div>
-                    {x + y}
+                    <div>{count}</div>
+                    <button onClick={updateCount}>Count</button>
                 </div>
-            );
+            )
         }
-        function Wrapper() {
-            return (
-                <div>
-                    <Hello name="Harry" /><Hello name="Ron" /><Hello name="Hermione" />
-                </div>
-            );
-        }
-        function Hello(props) {
-            return (
-                <h1>Hello, {props.name}</h1>
-            );
-        }
-
-
-        ReactDOM.render(<Wrapper />, document.querySelector("#app"));
+        ReactDOM.render(<App />, document.querySelector("#app"));
     </script>
 </body>
 
